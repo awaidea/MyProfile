@@ -128,7 +128,7 @@
     </div>
     <!-- 简介部分 -->
     <div class="description">
-      <span id="description-text">风随雨落，光伴鸿飞！</span>
+      <span id="description-text"></span>
     </div>
     <!-- 社交图标部分 -->
     <div class="social-icons">
@@ -141,7 +141,7 @@
     <!-- 年龄和状态部分 -->
     <div class="age-status">
       <div class="age">
-        <i class="fa fa-pencil" aria-hidden="true"></i>
+        <i class="fa fa-pencil" aria-hidden="true"> </i>
         <span id="age-text"></span>
       </div>
       <div class="status">
@@ -179,7 +179,7 @@
     window.onload = function () {
       // 简介打字机效果
       const descriptionText = document.getElementById('description-text');
-      const description = "这里填写你的个人简介内容"; // 请替换为实际简介
+      const description = "风随雨落，光伴鸿飞！"; // 请替换为实际简介
       typeWriter(descriptionText, description);
 
       // 计算年龄
@@ -187,7 +187,7 @@
       const now = new Date();
       const age = now.getFullYear() - birthDate.getFullYear();
       const ageText = document.getElementById('age-text');
-      ageText.textContent = `年龄：${age} 岁`;
+      ageText.textContent = ` ${age} 岁`;
     };
   </script>
 </body>
