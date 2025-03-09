@@ -1,14 +1,195 @@
-![](https://file.ghriver.top/avatar.png)
-# Hi,I'm WinterCat!
-**Nice to meet you!**
+<!DOCTYPE html>
+<html lang="zh-CN">
 
-## Social Apps
-- [GitHub](https://github.com/awaidea)
-- [Telegram](https://t.me/ghriver)
-- [NetEase](https://music.163.com/#/user/home?id=4015082844)
-- [Email](mailto:haoyu_ovo@163.com)
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个人主页</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* 整体页面样式 */
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('背景图片路径'); /* 请替换为实际背景图片路径 */
+      background-attachment: fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+    }
 
-## My Sites
-- [Blog](https://blog.catp.cc)
+    /* 主要容器样式 */
+   .container {
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+    }
 
-[MoeICP20250004](https://icp.gov.moe/?keyword=20250004)
+    /* 头像样式 */
+   .avatar {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+   .avatar img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+    }
+
+    /* 昵称样式 */
+   .nickname {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* 简介样式 */
+   .description {
+      margin-bottom: 20px;
+    }
+
+    /* 社交图标样式 */
+   .social-icons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+   .social-icons a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 50%;
+      background-color: #333;
+      color: white;
+      margin: 5px;
+      text-decoration: none;
+    }
+
+   .social-icons a:hover {
+      background-color: #555;
+    }
+
+    /* 年龄和状态样式 */
+   .age-status {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+   .age,
+   .status {
+      margin: 0 10px;
+    }
+
+    /* 好友头像列表样式 */
+   .friend-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+   .friend-list a {
+      margin: 5px;
+    }
+
+   .friend-list a img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+
+    /* GitHub贡献图样式 */
+   .github-contribution {
+      margin-bottom: 20px;
+    }
+
+    /* 页脚信息样式 */
+   .footer-info {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- 头像部分 -->
+    <div class="avatar">
+      <img src="https://file.catp.cc/avatar.png" alt="头像"> <!-- 请替换为实际头像路径 -->
+    </div>
+    <!-- 昵称部分 -->
+    <div class="nickname">
+      <span id="nickname-text">WinterCat</span>
+    </div>
+    <!-- 简介部分 -->
+    <div class="description">
+      <span id="description-text">风随雨落，光伴鸿飞！</span>
+    </div>
+    <!-- 社交图标部分 -->
+    <div class="social-icons">
+      <a href="mailto:i@catp.cc" title="Email"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://github.com/awaidea" title="GitHub"><i class="fa-brands fa-github"></i></a>
+      <!-- <a href="QQ链接" title="QQ"><i class="fa-brands fa-qq"></i></a> -->
+      <a href="https://blog.catp.cc" title="Blog"><i class="fa-solid fa-blog"></i></a>
+      <!-- <a href="网易云音乐链接" title="网易云音乐"><i class="fa fa-music"></i></a> -->
+    </div>
+    <!-- 年龄和状态部分 -->
+    <div class="age-status">
+      <div class="age">
+        <i class="fa fa-pencil" aria-hidden="true"></i>
+        <span id="age-text"></span>
+      </div>
+      <div class="status">
+        <i class="fa-solid fa-heartbeat"></i>
+        <span id="status-text">Sleeping!</span>
+      </div>
+    </div>
+    <!-- 好友头像部分 -->
+    <div class="friend-list">
+      <!-- <a href="好友1链接"><img src="好友1头像路径" alt="好友1头像"></a> -->
+      <!-- <a href="好友2链接"><img src="好友2头像路径" alt="好友2头像"></a> -->
+      <!-- 可继续添加好友头像 -->
+    </div>
+    <!-- GitHub贡献图部分 -->
+    <div class="github-contribution">
+      <img src="https://ghchart.rshah.org/668B8B/awaidea" />
+    </div>
+    <!-- 页脚信息部分 -->
+    <div class="footer-info">
+      <span id="record-info"><a href="https://icp.gov.moe/?keyword=20240004">MoeICP20250004</a></span><br>
+      <span id="copyright-info">版权信息：Copyright © WinterCat</span><br>
+       <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_pv">已有<span id="busuanzi_value_site_pv"></span>个客官访问本站</span>
+    </div>
+  </div>
+  <script>
+    // 模拟打字机效果
+    function typeWriter(element, text, i = 0) {
+      if (i < text.length) {
+        element.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(() => typeWriter(element, text, i), 100);
+      }
+    }
+
+    window.onload = function () {
+      // 简介打字机效果
+      const descriptionText = document.getElementById('description-text');
+      const description = "这里填写你的个人简介内容"; // 请替换为实际简介
+      typeWriter(descriptionText, description);
+
+      // 计算年龄
+      const birthDate = 2011-08-19('你的出生日期'); // 格式如 '1990-01-01'，请替换
+      const now = new Date();
+      const age = now.getFullYear() - birthDate.getFullYear();
+      const ageText = document.getElementById('age-text');
+      ageText.textContent = `年龄：${age} 岁`;
+    };
+  </script>
+</body>
+
+</html>
