@@ -1,6 +1,8 @@
+![](https://file.catp.cc/avatar.png)
 # Hi!I'm WinterCat
 # Nice to meet you!
 > Well,I don't know what I want to say.
+
 # Site
 - [Blog](https://blog.catp.cc)
 
