@@ -13,9 +13,13 @@
 > If I have some friends,I'll show them here
 
 # Personal Infomation
-Name | Deng Haoyu
-Birth | 2011-08-19
-Age | 13
-Live | Chengdu,Sichuan,China
+Name: Deng Haoyu
 
-(MoeICP20250004)[https://icp.gov.moe/?keyword=20250004]
+Birth: 2011-08-19
+
+Age: 13
+
+Home: Chengdu,Sichuan,China
+
+
+[MoeICP20250004](https://icp.gov.moe/?keyword=20250004)
