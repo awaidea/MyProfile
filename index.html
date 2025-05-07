@@ -7,41 +7,7 @@
   <link rel="shortcut icon" href="https://file.catp.cc/avatar.png">
   <title>WinterCat</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.3/cerulean/bootstrap.min.css">
-<script>
-  window.apiReq = function (method, url, data, headers) {
-    headers = headers || {}
-    let opt = { method }
-    if (method != 'get') {
-      headers['Content-Type'] = 'application/json'
-      opt = { method, headers, body: JSON.stringify(data)}
-    }
-    console.log(url)
-    return fetch(url, opt).then(res => {
-      return new Promise(async (resolve, reject) => {
-        const body = await res.json();
-        if (res.status < 300) {
-          resolve(body)
-        } else {
-          reject(body)
-        }
-      })
-    })
-  }
 
-  window.parseJwt = (token) => {
-    const base64Url = token.split('.')[1];
-    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-    const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
-        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-    }).join(''));
-    return JSON.parse(jsonPayload);
-  }
-
-  const els = document.querySelectorAll('.article table')
-  for (const el of els) {
-    el.classList.add('table table-bordered table-sm')
-  }
-</script>
   <style>
     [v-cloak] {
       display: none
