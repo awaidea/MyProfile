@@ -1,15 +1,192 @@
 <!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-  <title>小伙伴们</title>
+  <title>小伙伴们 | WinterCat</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="description" content="WinterCat的朋友们，一起分享美好时光">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #6C5CE7;
+      --secondary-color: #A29BFE;
+      --accent-color: #FD79A8;
+      --text-color: #2D3436;
+      --light-bg: #F9F9F9;
+      --card-bg: #FFFFFF;
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+    
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.8;
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+      background-color: var(--light-bg);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    
+    .site-title {
+      font-size: 2.5rem;
+      font-weight: 300;
+      margin: 0;
+      color: var(--primary-color);
+      position: relative;
+      display: inline-block;
+    }
+    
+    .site-title::after {
+      content: '';
+      position: absolute;
+      width: 60%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+      bottom: -10px;
+      left: 20%;
+      border-radius: 3px;
+    }
+    
+    .page-subtitle {
+      font-size: 1.1rem;
+      color: #636e72;
+      font-weight: 300;
+      margin-top: 15px;
+    }
+    
+    #qexo-friends {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+      margin-bottom: 40px;
+      transition: transform 0.3s ease;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #636e72;
+      font-size: 0.9rem;
+      margin-top: auto;
+      background-color: var(--card-bg);
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.03);
+    }
+    
+    footer a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+    
+    footer a:hover {
+      color: var(--accent-color);
+      text-decoration: underline;
+    }
+    
+    .footer-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .footer-separator {
+      color: #dfe6e9;
+    }
+    
+    .floating-button {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: var(--primary-color);
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      z-index: 10;
+    }
+    
+    .floating-button:hover {
+      background: var(--accent-color);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(253, 121, 168, 0.4);
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        padding: 30px 15px;
+      }
+      
+      .site-title {
+        font-size: 2rem;
+      }
+      
+      #qexo-friends {
+        padding: 20px;
+      }
+      
+      .floating-button {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+      }
+    }
+  </style>
 </head>
 <body>
-<div id="qexo-friends"></div>
-<link rel="stylesheet" href="https://unpkg.com/qexo-friends/friends.css"/>
-<script src="https://registry.npmmirror.com/qexo-static/1.6.0/files/hexo/friends.js"></script>
-<script>loadQexoFriends("qexo-friends", "https://panel.catp.cc")</script>
+  <div class="container">
+    <header>
+      <h1 class="site-title">Friends</h1>
+      <p class="page-subtitle">遇见志同道合的小伙伴们</p>
+    </header>
+    
+    <div id="qexo-friends"></div>
+  </div>
+  
+  <footer>
+    <div class="footer-content">
+      <span>© 2025 WinterCat</span>
+      <span class="footer-separator">|</span>
+      <a href="https://icp.gov.moe/?keyword=20250004">萌ICP备20250004号</a>
+    </div>
+  </footer>
+  
+  <div class="floating-button" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </div>
+  
+  <link rel="stylesheet" href="https://unpkg.com/qexo-friends/friends.css"/>
+  <script src="https://registry.npmmirror.com/qexo-static/1.6.0/files/hexo/friends.js"></script>
+  <script>
+    loadQexoFriends("qexo-friends", "https://panel.catp.cc")
+  </script>
 </body>
-<footer>
-  <p>WinterCat &copy; 2025|<a href="https://icp.gov.moe/?keyword=20250004">MoeICP20250004</a></p>
-</footer>
 </html>
