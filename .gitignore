@@ -1,0 +1,4 @@
+data/settings.db
+data/settings.db-journal
+.DS_Store
+*.log
